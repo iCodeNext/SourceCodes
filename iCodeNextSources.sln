@@ -9,11 +9,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Algorithms", "Algorithms", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MorganStrings", "src\Algorithms\MorganStrings\MorganStrings.csproj", "{D64D9DA3-55A7-40CE-A149-B19FDD660BCB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DegreesOfArray", "DegreesOfArray\DegreesOfArray.csproj", "{39ED7FAC-4C98-4168-B6A1-9DED41644568}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DegreesOfArray", "DegreesOfArray\DegreesOfArray.csproj", "{39ED7FAC-4C98-4168-B6A1-9DED41644568}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CssProjects", "CssProjects\CssProjects.csproj", "{D9647856-9DBF-4AB7-9388-150174BAF13D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CssProjects", "CssProjects\CssProjects.csproj", "{D9647856-9DBF-4AB7-9388-150174BAF13D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Subsequence", "Subsequence\Subsequence.csproj", "{2616685D-415E-4FD6-BAC7-255A5B0F94D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Subsequence", "Subsequence\Subsequence.csproj", "{2616685D-415E-4FD6-BAC7-255A5B0F94D3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EntityFramework", "EntityFramework", "{D0F5D432-B1FB-43FC-BC76-A10DD6AF9C55}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,7 @@ Global
 		{39ED7FAC-4C98-4168-B6A1-9DED41644568} = {84ED22DA-193C-4FD2-8270-C664855C9DDC}
 		{D9647856-9DBF-4AB7-9388-150174BAF13D} = {84ED22DA-193C-4FD2-8270-C664855C9DDC}
 		{2616685D-415E-4FD6-BAC7-255A5B0F94D3} = {84ED22DA-193C-4FD2-8270-C664855C9DDC}
+		{D0F5D432-B1FB-43FC-BC76-A10DD6AF9C55} = {DBD41598-5F74-4D0F-B371-D9E920A8EDE2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {999321AE-12B4-4228-B0EA-0A5C7F554C15}
