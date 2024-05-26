@@ -1,16 +1,15 @@
 ﻿
 using System;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 
 public class Solution
 {
-    private static Dictionary<int, int> _subsequenceLengths = [];
+    private static readonly Dictionary<int, int> _subsequenceLengths = [];
     public static List<int> GetMaxSubsequenceLen(List<int> arr)
     {
         List<int> sortedArray = new(arr);
         sortedArray.Sort();
-
-
 
         for (int i = 0; i < sortedArray.Count; i++)
         {
@@ -76,7 +75,11 @@ public class Solution
             while (maxDistinctCount > 0)
             {
                 maxDistinctCount--;
-                int allocation = CalculateMaxAllocation(distinctCollection, maxDistinctCount);
+                int allocation = distinctCollection.GroupBy(n => n)
+                                                   .ToDictionary(g => g.Key, g => g.Count())
+                                                   .OrderByDescending(x => x.Value)
+                                                   .Take(maxDistinctCount)
+                                                   .Sum(x => x.Value);
                 bool balancedArray = FindBalancedSubsequence(largerSubArray, medianValue, maxDistinctCount, allocation);
                 if (balancedArray)
                 {
@@ -98,14 +101,6 @@ public class Solution
             return;
         }
         _subsequenceLengths.Add(key, length);
-    }
-
-    private static int CalculateMaxAllocation(HashSet<int> array, int distinctCount)
-    {
-        var frequencyDict = array.GroupBy(n => n).ToDictionary(g => g.Key, g => g.Count());
-        return frequencyDict.OrderByDescending(x => x.Value)
-                            .Take(distinctCount)
-                            .Sum(x => x.Value);
     }
 
     private static bool FindBalancedSubsequence(List<int> array, int medianValue, int distinctCount, int length)

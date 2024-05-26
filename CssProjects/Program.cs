@@ -2,74 +2,7 @@
 
 public class Program
 {
-    //public static int MinFolders(int cssFiles, int jsFiles, int readMeFiles, int capacity)
-    //{
-    //    int totalFiles = cssFiles + jsFiles + readMeFiles;
-    //    if (totalFiles == 0)
-    //        return 0;
-
-    //    if (readMeFiles == totalFiles)
-    //        return readMeFiles;
-
-    //    int minimumNewFoldersCount = 0;
-    //    bool preferCss = true;
-
-    //    while (cssFiles > 0 || jsFiles > 0 || readMeFiles > 0)
-    //    {
-    //        minimumNewFoldersCount++;
-    //        int[] filesInFolder = new int[3];
-    //        int newFolderCapacity = 0;
-    //        if (readMeFiles > 0)
-    //        {
-    //            readMeFiles--;
-    //            newFolderCapacity++;
-    //            filesInFolder[2] = 1;
-    //        }
-
-    //        while (newFolderCapacity < capacity)
-    //        {
-    //            if (preferCss)
-    //            {
-    //                if (cssFiles > 0 && Math.Abs(filesInFolder[0] - filesInFolder[1]) == 0)
-    //                {
-    //                    cssFiles--;
-    //                    filesInFolder[0]++;
-    //                }
-    //                else if (jsFiles > 0 && ((Math.Abs(filesInFolder[1] - filesInFolder[0]) == 1) || (Math.Abs(filesInFolder[1] - filesInFolder[0]) == 0)))
-    //                {
-    //                    jsFiles--;
-    //                    filesInFolder[1]++;
-    //                }
-    //                else
-    //                {
-    //                    break;
-    //                }
-    //            }
-    //            else
-    //            {
-    //                if (jsFiles > 0 && Math.Abs(filesInFolder[1] - filesInFolder[0]) == 0)
-    //                {
-    //                    jsFiles--;
-    //                    filesInFolder[1]++;
-    //                }
-    //                else if (cssFiles > 0 && ((Math.Abs(filesInFolder[0] - filesInFolder[1]) == 1) || (Math.Abs(filesInFolder[0] - filesInFolder[1]) == 0)))
-    //                {
-    //                    cssFiles--;
-    //                    filesInFolder[0]++;
-    //                }
-    //                else
-    //                {
-    //                    break;
-    //                }
-    //            }
-    //            newFolderCapacity++;
-    //        }
-    //        preferCss = !preferCss;
-    //    }
-
-    //    return minimumNewFoldersCount;
-    //}
-
+  
     public static int MinFolders(int cssFiles, int jsFiles, int readMeFiles, int capacity)
     {
         int totalFiles = cssFiles + jsFiles + readMeFiles;
