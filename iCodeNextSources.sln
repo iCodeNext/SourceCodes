@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Subsequence", "Subsequence\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EntityFramework", "EntityFramework", "{D0F5D432-B1FB-43FC-BC76-A10DD6AF9C55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{FD5655AC-E72B-4E1C-9C07-96564C39D8DF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "University", "ConsoleApp1\University.csproj", "{FD5655AC-E72B-4E1C-9C07-96564C39D8DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
