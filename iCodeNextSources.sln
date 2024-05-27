@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Subsequence", "Subsequence\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EntityFramework", "EntityFramework", "{D0F5D432-B1FB-43FC-BC76-A10DD6AF9C55}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{FD5655AC-E72B-4E1C-9C07-96564C39D8DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{2616685D-415E-4FD6-BAC7-255A5B0F94D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2616685D-415E-4FD6-BAC7-255A5B0F94D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2616685D-415E-4FD6-BAC7-255A5B0F94D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD5655AC-E72B-4E1C-9C07-96564C39D8DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD5655AC-E72B-4E1C-9C07-96564C39D8DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD5655AC-E72B-4E1C-9C07-96564C39D8DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD5655AC-E72B-4E1C-9C07-96564C39D8DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +56,7 @@ Global
 		{D9647856-9DBF-4AB7-9388-150174BAF13D} = {84ED22DA-193C-4FD2-8270-C664855C9DDC}
 		{2616685D-415E-4FD6-BAC7-255A5B0F94D3} = {84ED22DA-193C-4FD2-8270-C664855C9DDC}
 		{D0F5D432-B1FB-43FC-BC76-A10DD6AF9C55} = {DBD41598-5F74-4D0F-B371-D9E920A8EDE2}
+		{FD5655AC-E72B-4E1C-9C07-96564C39D8DF} = {84ED22DA-193C-4FD2-8270-C664855C9DDC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {999321AE-12B4-4228-B0EA-0A5C7F554C15}
