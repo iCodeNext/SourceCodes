@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "University", "ConsoleApp1\U
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeDecrements", "TreeDecrements\TreeDecrements.csproj", "{913CA8E4-886C-426B-9965-EFE54894A7AC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMS", "DMS\DMS.csproj", "{CA3133E6-834C-4FE4-9B94-0D28E676AF01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{913CA8E4-886C-426B-9965-EFE54894A7AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{913CA8E4-886C-426B-9965-EFE54894A7AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{913CA8E4-886C-426B-9965-EFE54894A7AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA3133E6-834C-4FE4-9B94-0D28E676AF01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA3133E6-834C-4FE4-9B94-0D28E676AF01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA3133E6-834C-4FE4-9B94-0D28E676AF01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA3133E6-834C-4FE4-9B94-0D28E676AF01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +70,7 @@ Global
 		{D0F5D432-B1FB-43FC-BC76-A10DD6AF9C55} = {DBD41598-5F74-4D0F-B371-D9E920A8EDE2}
 		{FD5655AC-E72B-4E1C-9C07-96564C39D8DF} = {84ED22DA-193C-4FD2-8270-C664855C9DDC}
 		{913CA8E4-886C-426B-9965-EFE54894A7AC} = {84ED22DA-193C-4FD2-8270-C664855C9DDC}
+		{CA3133E6-834C-4FE4-9B94-0D28E676AF01} = {84ED22DA-193C-4FD2-8270-C664855C9DDC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {999321AE-12B4-4228-B0EA-0A5C7F554C15}
