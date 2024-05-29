@@ -1,0 +1,82 @@
+﻿A manufacturing company is located in a certain city. Their goods need to be shipped to other cities that are connected with bidirectional roads, though some cities may not be accessible because roads don't connect to them. The order of deliveries is determined first by distance, then by priority. Given the number of cities, their connections via roads, and what city the manufacturing company is located in, determine the order of cities where the goods will be delivered.
+
+For example, let's say that the number of cities is *cityNodes = 4*, where *cityFrom = [1, 2, 2]*, *cityTo = [2, 3, 4]*, and *company = 1*. In other words, the manufacturing company is located in city 1, and the roads run between cities 1 and 2, cities 2 and 3, and cities 2 and 4, like so:
+
+In this case, the cities would be visited based on the following logic:
+- The closest city (or cities) is visited first. This is city 2, which is 1 unit from the manufacturing company.
+- The next-closest city (or cities) is visited next. This is city 3 and city 4, which are both 2 units from the manufacturing company.
+  - In this case, priority is then calculated, visiting the smaller-numbered city first (city 3) and continuing in ascending order (city 4).
+
+Therefore, the order is [2, 3, 4], which is the answer you would return.
+
+#### Function Description
+
+Complete the function *order* in the editor below.
+
+*order* has the following parameters:
+- int *cityNodes*: the number of cities
+- int *cityFrom[n]*: the first city node where there is a bidirectional edge
+- int *cityTo[n]*: the second city node where there is a bidirectional edge
+- int *company*: the node where the route starts
+
+Returns:
+- int[]: the cities where the goods will be delivered in the order visited
+
+#### Constraints
+- 2 ≤ *cityNodes* ≤ 10^5
+- 1 ≤ *n* ≤ min((cityNodes × (cityNodes - 1)) ⁄ 2, 10^5)
+- 1 ≤ *cityFrom[i]*, *cityTo[i]*, *company* ≤ *n*
+- *cityFrom[i]* ≠ *cityTo[i]*
+
+#### Input Format For Custom Testing
+
+The first line contains two space-separated integers: *cityNodes*, denoting the number of cities, and *n*, denoting the number of roads.
+
+Each line *i* of the *n* subsequent lines (where 0 ≤ i < n) contains two space-separated integers, *cityFrom[i]* and *cityTo[i]*
+
+The next line contains an integer, *company*.
+
+#### Sample Case 0
+
+##### Sample Input For Custom Testing
+```
+STDIN      Function
+-----      --------
+5 5   →   cityNodes = 5, n = 5
+1 2   →   cityFrom = 1, cityTo = 2
+1 3   →   cityFrom = 1, cityTo = 3
+2 4   →   cityFrom = 2, cityTo = 4
+3 5   →   cityFrom = 3, cityTo = 5
+1 5   →   cityFrom = 1, cityTo = 5
+1     →   company = 1
+```
+
+##### Sample Output
+```
+2
+3
+5
+4
+```
+
+##### Explanation
+Cities 2, 3, and 5 are all 1 unit of distance away from the manufacturing company. These are visited based on priority in ascending order, so [2, 3, 5]. City 4 is 2 units of distance away from the manufacturing company, so it is visited next. Therefore, the final order is [2, 3, 5, 4].
+
+#### Sample Case 1
+
+##### Sample Input For Custom Testing
+```
+STDIN      Function
+-----      --------
+3 1   →   cityNodes = 3, n = 1
+1 2   →   cityFrom = 1, cityTo = 2
+2     →   company = 2
+```
+
+##### Sample Output
+```
+1
+```
+
+##### Explanation
+City 1 is located 1 unit of distance away from the manufacturing company. City 3 is not accessible because there are no roads connecting it to the manufacturing company's city. Therefore, the answer is [1].
