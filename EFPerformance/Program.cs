@@ -14,7 +14,7 @@ AppDbContext _context = new();
 //foreach (var postTitle in _context.Posts.Select(x => x.Title))
 //{
 //    Console.WriteLine("Post: " + postTitle);
-//} 
+//}
 #endregion
 
 
@@ -33,7 +33,7 @@ AppDbContext _context = new();
 #region Cartesian explosion
 
 //var posts = _context.Users.Include(x => x.Posts).ToList();
-//var posts = _context.Users.Include(x => x.Posts).AsSplitQuery().ToList();
+var posts = _context.Users.Include(x => x.Posts).AsSplitQuery().ToList();
 #endregion
 
 
@@ -73,14 +73,24 @@ AppDbContext _context = new();
 
 
 #region Using SQL queries
-var result = _context.Database
-                     .SqlQueryRaw<PostDto>($"SELECT [p].[Id], [p].[Title] FROM [Posts] AS [p]")
-                     //.Where(x=>x.Id == 1)
-                     .ToList();
-foreach (var item in result)
-{
-    Console.WriteLine($"Post : {item.Title}");
-}
+//int Id = 1;
+//var result = _context.Database
+//                     .SqlQuery<PostDto>($@"SELECT [p].[Id], [p].[Title]
+//                                           FROM [Posts] AS [p]
+//                                           where [p].Id = {Id}")
+//                     //.Where(x=>x.Id == 1)
+//                     .ToList();
+
+//var result_raw = _context.Database
+//                     .SqlQueryRaw<PostDto>($@"SELECT {"[p].[Id], [p].[Title]"}
+//                                              FROM [Posts] AS [p]
+//                                              where [p].Id = @p0",Id)
+//                     //.Where(x=>x.Id == 1)
+//                     .ToList();
+//foreach (var item in result)
+//{
+//    Console.WriteLine($"Post : {item.Title}");
+//}
 #endregion
 Console.ReadLine();
 
