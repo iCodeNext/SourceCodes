@@ -14,6 +14,7 @@ internal class AppDbContext : DbContext
         optionsBuilder
             .UseSqlServer("Server=DESKTOP-TVCSFN3\\MHA;Database=EFCoreExamples;Trusted_Connection=True;Encrypt=false")
             .EnableSensitiveDataLogging()
+            //.UseLazyLoadingProxies()
             .LogTo(Console.WriteLine, LogLevel.Information);
     }
 
