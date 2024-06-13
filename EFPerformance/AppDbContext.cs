@@ -14,7 +14,7 @@ internal class AppDbContext : DbContext
         optionsBuilder
             .UseSqlServer("Server=DESKTOP-TVCSFN3\\MHA;Database=EFCoreExamples;Trusted_Connection=True;Encrypt=false")
             .EnableSensitiveDataLogging()
-            //.UseLazyLoadingProxies()
+            .UseLazyLoadingProxies()
             .LogTo(Console.WriteLine, LogLevel.Information);
     }
 
@@ -25,7 +25,7 @@ public class User
     public int Id { get; set; }
     public string Name { get; set; }
 
-    public ICollection<Post> Posts { get; set; }
+    public virtual ICollection<Post> Posts { get; set; }
 }
 
 public class Post
@@ -37,9 +37,9 @@ public class Post
     public int UserId { get; set; }
 
     [ForeignKey(nameof(UserId))]
-    public User User { get; set; }
+    public virtual User User { get; set; }
 
-    public ICollection<Tag> Tags { get; set; }
+    public virtual ICollection<Tag> Tags { get; set; }
 }
 
 public class Tag
@@ -49,5 +49,5 @@ public class Tag
 
     public int PostId { get; set; }
     [ForeignKey(nameof(PostId))]
-    public Post Post { get; set; }
+    public virtual Post Post { get; set; }
 }

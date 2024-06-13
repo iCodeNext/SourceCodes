@@ -17,12 +17,10 @@ AppDbContext _context = new();
 //}
 #endregion
 
-
 #region resultset size
 //var posts = _context.Posts
 //    .Where(p => p.Title.StartsWith("P"))
 //    .ToList();
-
 
 //var posts = _context.Posts
 //    .Where(p => p.Title.StartsWith("P"))
@@ -31,11 +29,9 @@ AppDbContext _context = new();
 #endregion
 
 #region Cartesian explosion
-
 //var posts = _context.Users.Include(x => x.Posts).ToList();
-var posts = _context.Users.Include(x => x.Posts).AsSplitQuery().ToList();
+//var posts = _context.Users.Include(x => x.Posts).AsSplitQuery().ToList();
 #endregion
-
 
 #region Lazy Loading
 //foreach (var post in _context.Posts.ToList())
@@ -70,7 +66,6 @@ var posts = _context.Users.Include(x => x.Posts).AsSplitQuery().ToList();
 //    .ToList();
 
 #endregion
-
 
 #region Using SQL queries
 //int Id = 1;
