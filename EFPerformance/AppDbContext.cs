@@ -17,7 +17,6 @@ internal class AppDbContext : DbContext
             .UseLazyLoadingProxies()
             .LogTo(Console.WriteLine, LogLevel.Information);
     }
-
 }
 
 public class User
