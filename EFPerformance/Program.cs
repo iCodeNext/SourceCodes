@@ -1,4 +1,5 @@
-﻿using EFPerformance;
+﻿using BenchmarkDotNet.Attributes;
+using EFPerformance;
 using Microsoft.EntityFrameworkCore;
 using System;
 using static EFPerformance.AppDbContext;
@@ -114,8 +115,8 @@ int Id = 1;
 
 
 #region Parameters
-var post1 = _context.Posts.FirstOrDefault(p => p.Title == "post1");
-var post2 = _context.Posts.FirstOrDefault(p => p.Title == "post2");
+//var post1 = _context.Posts.FirstOrDefault(p => p.Title == "post1");
+//var post2 = _context.Posts.FirstOrDefault(p => p.Title == "post2");
 
 
 #endregion
@@ -127,3 +128,20 @@ var post2 = _context.Posts.FirstOrDefault(p => p.Title == "post2");
 //    public int Id { get; set; }
 //    public string Title { get; set; }
 //}
+
+
+
+BenchmarkDotNet.Running.BenchmarkRunner.Run<FirstQueryBenchmark>();
+
+
+[MemoryDiagnoser]
+public class FirstQueryBenchmark
+{
+    [Benchmark]
+    public void RunFirstQuery()
+    {
+        AppDbContext _context = new();
+        _context.Posts.ToList();
+    }
+
+}

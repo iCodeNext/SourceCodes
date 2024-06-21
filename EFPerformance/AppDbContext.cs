@@ -12,10 +12,11 @@ internal class AppDbContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder
-            .UseSqlServer("Server=DESKTOP-TVCSFN3\\MHA;Database=EFCoreExamples;Trusted_Connection=True;Encrypt=false")
-            .EnableSensitiveDataLogging()
-            .UseLazyLoadingProxies()
-            .LogTo(Console.WriteLine, LogLevel.Information);
+            .EnableServiceProviderCaching(false)
+            .UseSqlServer("Server=DESKTOP-TVCSFN3\\MHA;Database=EFCoreExamples;Trusted_Connection=True;Encrypt=false");
+            //.EnableSensitiveDataLogging()
+            //.UseLazyLoadingProxies()
+            //.LogTo(Console.WriteLine, LogLevel.Information);
     }
 }
 
