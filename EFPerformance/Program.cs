@@ -110,15 +110,22 @@ int Id = 1;
 
 #region Update / Delete
 
+//foreach (var post in _context.Posts)
+//{
+//    post.Description = post.Description + "--100";
+//}
+//_context.SaveChanges();
 
+
+//_context.Posts.ExecuteUpdate(s => s.SetProperty(e => e.Description, e => e.Description + "--100"));
 #endregion
 
 
 #region Parameters
-//var post1 = _context.Posts.FirstOrDefault(p => p.Title == "post1");
-//var post2 = _context.Posts.FirstOrDefault(p => p.Title == "post2");
-
-
+//string p1 = "post1";
+//string p2 = "post2";
+//var post1 = _context.Posts.FirstOrDefault(p => p.Title == p1 );
+//var post2 = _context.Posts.FirstOrDefault(p => p.Title == p2);
 #endregion
 
 //Console.ReadLine();
@@ -142,6 +149,6 @@ public class FirstQueryBenchmark
     {
         AppDbContext _context = new();
         _context.Posts.ToList();
-    }
+    } 
 
 }
