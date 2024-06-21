@@ -13,12 +13,7 @@ internal class AppDbContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder
-            //.UseModel(AppDbContextModel.Instance)
-            //.EnableServiceProviderCaching(false)
             .UseSqlServer("Server=DESKTOP-TVCSFN3\\MHA;Database=EFCoreExamples;Trusted_Connection=True;Encrypt=false");
-            //.EnableSensitiveDataLogging()
-            //.UseLazyLoadingProxies()
-            //.LogTo(Console.WriteLine, LogLevel.Information);
     }
 }
 
