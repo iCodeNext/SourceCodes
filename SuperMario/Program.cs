@@ -107,9 +107,22 @@ public class Program
         String instructions_11 = "RJJRRRRR";
         String instructions_12 = "RJJRRRJ";
 
+        // CalcualteObstables(obstacles_1, instructions_1);//# True
+        //CalcualteObstables(obstacles_1, instructions_2);//# False
+        CalcualteObstables(obstacles_1, instructions_3);//# True
+        //CalcualteObstables(obstacles_1, instructions_4);//# True
+        //CalcualteObstables(obstacles_1, instructions_5);//# False
+        //CalcualteObstables(obstacles_1, instructions_6);//# False
+        //CalcualteObstables(obstacles_1, instructions_7);//# True
+        //CalcualteObstables(obstacles_1, instructions_8);//# False
+        //CalcualteObstables(obstacles_1, instructions_9);//# False
+        //CalcualteObstables(obstacles_1, instructions_10);// # True
+        //CalcualteObstables(obstacles_2, instructions_11);// # False
+        //CalcualteObstables(obstacles_2, instructions_12);// # True
+        //CalcualteObstables(obstacles_3, instructions_9);// # False
 
-        var result = CalcualteObstables(obstacles_1, instructions_7);
-        Console.WriteLine(result);
+        //var result = CalcualteObstables(obstacles_1, instructions_7);
+        //Console.WriteLine(result);
     }
 
 
@@ -144,7 +157,7 @@ public class Program
                             index--;
                         }
 
-                        Console.WriteLine(index);
+                        //Console.WriteLine(index);
                         break;
                     }
                 case 'J':
@@ -157,7 +170,7 @@ public class Program
                         {
                             index -= 2;
                         }
-                        Console.WriteLine(index);
+                        //Console.WriteLine(index);
                         break;
                     }
                 case 'R':
@@ -173,7 +186,7 @@ public class Program
                         {
                             index++;
                         }
-                        Console.WriteLine(index);
+                        //Console.WriteLine(index);
                         break;
                     }
                 default:
@@ -185,12 +198,19 @@ public class Program
         }
 
         if (gameOver)
+        {
+            Console.WriteLine(false);
             return false;
 
+        }
+
         if (index == 10)
+        {
+            Console.WriteLine(true);
             return true;
+        }
 
-
+        Console.WriteLine(false);
         return false;
     }
 }
