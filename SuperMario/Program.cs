@@ -108,7 +108,7 @@ public class Program
         String instructions_12 = "RJJRRRJ";
 
 
-        var result = CalcualteObstables(obstacles_1, instructions_1);
+        var result = CalcualteObstables(obstacles_1, instructions_7);
         Console.WriteLine(result);
     }
 
@@ -143,6 +143,8 @@ public class Program
                         {
                             index--;
                         }
+
+                        Console.WriteLine(index);
                         break;
                     }
                 case 'J':
@@ -155,6 +157,7 @@ public class Program
                         {
                             index -= 2;
                         }
+                        Console.WriteLine(index);
                         break;
                     }
                 case 'R':
@@ -170,6 +173,7 @@ public class Program
                         {
                             index++;
                         }
+                        Console.WriteLine(index);
                         break;
                     }
                 default:
@@ -180,7 +184,6 @@ public class Program
             }
         }
 
-        Console.WriteLine($"{gameOver} {index}");
         if (gameOver)
             return false;
 
