@@ -181,10 +181,10 @@ public class Program
         }
 
         Console.WriteLine($"{gameOver} {index}");
-        if (!gameOver)
+        if (gameOver)
             return false;
 
-        if (index == 11)
+        if (index == 10)
             return true;
 
 
