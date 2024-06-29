@@ -79,3 +79,115 @@ Complexity variables:
 
 N - number of instructions.
 */
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+public class Program
+{
+    static void Main(String[] args)
+    {
+        int[] obstacles_1 = new int[] { 4, 6 };
+        int[] obstacles_2 = new int[] { 9, 4, 2 };
+        int[] obstacles_3 = new int[] { };
+
+        String instructions_1 = "RRRJJRRR";
+        String instructions_2 = "RRRLJ";
+        String instructions_3 = "RRRJJRRRL";
+        String instructions_4 = "RRRLRJJRRR";
+        String instructions_5 = "RRRRRRRRRR";
+        String instructions_6 = "RRJJJJ";
+        String instructions_7 = "RLRRRJJRRLLJJJLRRRJJRRR";
+        String instructions_8 = "RRRJJRLJJJRRR";
+        String instructions_9 = "R";
+        String instructions_10 = "RJJJJR";
+        String instructions_11 = "RJJRRRRR";
+        String instructions_12 = "RJJRRRJ";
+
+
+        var result = CalcualteObstables(obstacles_1, instructions_1);
+        Console.WriteLine(result);
+    }
+
+
+    public static bool CalcualteObstables(int[] obstacles, string instructions)
+    {
+        string direction = "R";
+        int[] path = new int[11];
+        int index = 0;
+        bool gameOver = false;
+        for (int i = 0; i < obstacles.Length; i++)
+        {
+            path[obstacles[i]] = 1;
+        }
+
+        for (int i = 0; i < instructions.Length; i++)
+        {
+            switch (instructions[i])
+            {
+                case 'L':
+                    {
+                        direction = "L";
+                        if (index <= 0 || index >= 11)
+                        {
+                            index--;
+                        }
+                        else if (path[index - 1] == 1)
+                        {
+                            gameOver = true;
+                        }
+                        else
+                        {
+                            index--;
+                        }
+                        break;
+                    }
+                case 'J':
+                    {
+                        if (direction == "R")
+                        {
+                            index += 2;
+                        }
+                        else
+                        {
+                            index -= 2;
+                        }
+                        break;
+                    }
+                case 'R':
+                    {
+                        direction = "R";
+                        if (index < 0 || index >= 11)
+                            index++;
+                        else if (path[index + 1] == 1)
+                        {
+                            gameOver = true;
+                        }
+                        else
+                        {
+                            index++;
+                        }
+                        break;
+                    }
+                default:
+                    {
+                        gameOver = true;
+                        break;
+                    }
+            }
+        }
+
+        Console.WriteLine($"{gameOver} {index}");
+        if (!gameOver)
+            return false;
+
+        if (index == 11)
+            return true;
+
+
+        return false;
+    }
+}
