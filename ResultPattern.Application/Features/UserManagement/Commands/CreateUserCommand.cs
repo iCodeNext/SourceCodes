@@ -1,4 +1,7 @@
 ﻿using MediatR;
 
-namespace ResultPattern.Application.Features.UserManagement.Commands;
-public record CreateUserCommand(int Id, string Name, string Email) : IRequest<bool>;
+namespace ResultPattern.Application.Features.UserManagement;
+public record CreateUserCommand(string Name, string Email) : IRequest<CreateUserResult>;
+
+
+public record CreateUserResult(int UserId, string Name);
