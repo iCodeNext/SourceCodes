@@ -1,21 +1,23 @@
-﻿using ErrorOr;
-
-ErrorOr<float> Divide(int a, int b)
+﻿
+float Divide(int a, int b)
 {
     if (b is 0)
     {
-        return Error.Unexpected(description: "Cannot divide by zero");
+        throw new Exception("");
     }
 
     return a / b;
 }
 
 
-var result = Divide(4, 0);
-if (result.IsError)
+try
 {
-    Console.WriteLine(result.FirstError.Description);
-    return;
+    var result = Divide(4, 0);
+
+    Console.WriteLine(result); // 4
 }
-Console.WriteLine(result.Value * 2); // 4
+catch (Exception)
+{
+    Console.WriteLine("Error");
+}
 
