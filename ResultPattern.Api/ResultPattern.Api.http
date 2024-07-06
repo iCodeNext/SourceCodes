@@ -1,0 +1,11 @@
+﻿@ResultPattern.Api_HostAddress = https://localhost:7234
+
+POST {{ResultPattern.Api_HostAddress}}/api/simple/Add
+Content-Type: application/json
+
+{
+  "name": "Mohammad Karimi",
+  "emaiL": "mha.karimi@gmail.com"
+}
+
+###
