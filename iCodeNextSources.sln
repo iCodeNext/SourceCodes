@@ -31,17 +31,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Packages", "Packages", "{16
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleProblem", "ErrorOrPackage\SimpleProblem.csproj", "{21757A1F-AEF9-446C-BADE-C8D3B839D646}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResultPattern.Api", "ResultPattern.Api\ResultPattern.Api.csproj", "{3701BB8C-41A6-4EE8-8898-7A23D94A1EF7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResultPattern.Api", "ResultPattern.Api\ResultPattern.Api.csproj", "{3701BB8C-41A6-4EE8-8898-7A23D94A1EF7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Simple Problem", "Simple Problem", "{F6E4BA6A-A3DA-4EC4-B051-296A48E51F27}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api Problem", "Api Problem", "{E8E9BBFE-4253-4BD7-901B-2F6D9E4AFAD4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResultPattern.Application", "ResultPattern.Application\ResultPattern.Application.csproj", "{B7FA524F-A0F8-4835-B64C-4219707FC8E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResultPattern.Application", "ResultPattern.Application\ResultPattern.Application.csproj", "{B7FA524F-A0F8-4835-B64C-4219707FC8E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResultPattern.Infrastructure", "ResultPattern.Infrastructure\ResultPattern.Infrastructure.csproj", "{BA956CEB-DAAE-4484-BE05-60FE3310F14C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResultPattern.Infrastructure", "ResultPattern.Infrastructure\ResultPattern.Infrastructure.csproj", "{BA956CEB-DAAE-4484-BE05-60FE3310F14C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErrorOr", "ErrorOr\ErrorOr.csproj", "{3CC6D43F-F3D5-4C9E-BC0B-DAEC1D60500E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ErrorOr", "ErrorOr\ErrorOr.csproj", "{3CC6D43F-F3D5-4C9E-BC0B-DAEC1D60500E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "C#", "C#", "{D5F45AC0-B1A7-49F6-823C-B2C22CF12C50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventToturial", "EventToturial\EventToturial.csproj", "{34590E48-D21E-46BF-8DF6-64089479193D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +109,10 @@ Global
 		{3CC6D43F-F3D5-4C9E-BC0B-DAEC1D60500E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CC6D43F-F3D5-4C9E-BC0B-DAEC1D60500E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CC6D43F-F3D5-4C9E-BC0B-DAEC1D60500E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34590E48-D21E-46BF-8DF6-64089479193D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34590E48-D21E-46BF-8DF6-64089479193D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34590E48-D21E-46BF-8DF6-64089479193D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34590E48-D21E-46BF-8DF6-64089479193D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -129,6 +137,8 @@ Global
 		{B7FA524F-A0F8-4835-B64C-4219707FC8E9} = {E8E9BBFE-4253-4BD7-901B-2F6D9E4AFAD4}
 		{BA956CEB-DAAE-4484-BE05-60FE3310F14C} = {E8E9BBFE-4253-4BD7-901B-2F6D9E4AFAD4}
 		{3CC6D43F-F3D5-4C9E-BC0B-DAEC1D60500E} = {164943F1-27F4-4D89-8391-576FB8FB546E}
+		{D5F45AC0-B1A7-49F6-823C-B2C22CF12C50} = {DBD41598-5F74-4D0F-B371-D9E920A8EDE2}
+		{34590E48-D21E-46BF-8DF6-64089479193D} = {D5F45AC0-B1A7-49F6-823C-B2C22CF12C50}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {999321AE-12B4-4228-B0EA-0A5C7F554C15}
