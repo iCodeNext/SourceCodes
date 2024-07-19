@@ -1,14 +1,9 @@
 ﻿namespace EventToturial;
 public class SmsService
 {
-
-    public SmsService()
+    public void Send(string message)
     {
-        Stock.OnPriceChanged += Send;
-    }
-    public void Send(object sender,MessageEventArg @event)
-    {
-        // throw new NotImplementedException();
-        Console.WriteLine($"send sms to all users: new message: {@event.Message}");
+        
+        Console.WriteLine($"sms Send with {message} text");
     }
 }
