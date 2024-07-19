@@ -1,7 +1,10 @@
 ﻿using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Jobs;
+using BenchmarkDotNet.Running;
 using EFPerformance;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Security.Cryptography;
 using static EFPerformance.AppDbContext;
 
 AppDbContext _context = new();
@@ -136,19 +139,38 @@ int Id = 1;
 //    public string Title { get; set; }
 //}
 
+BenchmarkRunner.Run(typeof(Program).Assembly);
 
+// benchmark your code in several environments at once
 
-BenchmarkDotNet.Running.BenchmarkRunner.Run<FirstQueryBenchmark>();
+// view the relative performance of your benchmarks
 
-
-[MemoryDiagnoser]
-public class FirstQueryBenchmark
-{
-    [Benchmark]
-    public void RunFirstQuery()
+// In this attribute, you can specify a set of values
+public class IntroParams
     {
-        AppDbContext _context = new();
-        _context.Posts.ToList();
-    } 
+        [Params(100, 200)]
+        public int A { get; set; }
 
+        [Benchmark]
+        public void Benchmark()
+        {
+            Thread.Sleep(A + 5);
+        }
+    }
+
+
+// will be executed only once per a benchmarked method
+public class IntroSetupCleanupGlobal
+{
+    [Params(10, 100, 1000)]
+    public int N;
+
+    private int[] data;
+
+    [GlobalSetup]
+    public void GlobalSetup()
+    {
+        data = new int[N]; // executed once per each N value
+    }
 }
+
