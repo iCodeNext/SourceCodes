@@ -1,0 +1,9 @@
+{
+  "aws": {
+    "dynamodb": {
+      "tableName": "myTable"
+    }
+  }
+}
+
+

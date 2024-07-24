@@ -155,6 +155,5 @@ public class Sha256Benchmark
     [Benchmark]
     public byte[] Sha256() => sha256.ComputeHash(data);
 }
- 
- 
- 
+
+
