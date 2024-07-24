@@ -143,34 +143,18 @@ BenchmarkRunner.Run(typeof(Program).Assembly);
 
 // benchmark your code in several environments at once
 
-// view the relative performance of your benchmarks
+// attach to benchmarks and collect additional information
 
-// In this attribute, you can specify a set of values
-public class IntroParams
-    {
-        [Params(100, 200)]
-        public int A { get; set; }
-
-        [Benchmark]
-        public void Benchmark()
-        {
-            Thread.Sleep(A + 5);
-        }
-    }
-
-
-// will be executed only once per a benchmarked method
-public class IntroSetupCleanupGlobal
+[MemoryDiagnoser] // Garbge collection and allocation
+[ThreadingDiagnoser] // thread pool statistics
+public class Sha256Benchmark
 {
-    [Params(10, 100, 1000)]
-    public int N;
+    private readonly byte[] data;
 
-    private int[] data;
-
-    [GlobalSetup]
-    public void GlobalSetup()
-    {
-        data = new int[N]; // executed once per each N value
-    }
+    private readonly SHA256 sha256 = SHA256.Create();
+    [Benchmark]
+    public byte[] Sha256() => sha256.ComputeHash(data);
 }
-
+ 
+ 
+ 
