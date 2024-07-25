@@ -4,8 +4,8 @@ var stockMarket = new Stock();
 var smsService = new SmsService();
 var emailService = new EmailService();
 
-stockMarket.OnPriceChanged += smsService.Send;
-stockMarket.OnPriceChanged += emailService.Send;
+stockMarket.PriceChanged += smsService.Send;
+stockMarket.PriceChanged += emailService.Send;
 
 while (true)
 {
@@ -13,4 +13,3 @@ while (true)
     stockMarket.Update(price);
     Thread.Sleep(400);
 }
- 
