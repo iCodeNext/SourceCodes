@@ -49,7 +49,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventToturial", "EventTotur
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dotnet", "dotnet", "{64D4300A-37FC-4088-89BB-3A0ED2335D89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigurationName", "ConfigurationName\ConfigurationName.csproj", "{D101037B-1B72-4133-90E3-EE3C4BC5365C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfigurationName", "ConfigurationName\ConfigurationName.csproj", "{D101037B-1B72-4133-90E3-EE3C4BC5365C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCollections", "DotNetCollections\DotNetCollections.csproj", "{6D2FC424-EDFA-4CE1-B4F9-C88921438F20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -121,6 +123,10 @@ Global
 		{D101037B-1B72-4133-90E3-EE3C4BC5365C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D101037B-1B72-4133-90E3-EE3C4BC5365C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D101037B-1B72-4133-90E3-EE3C4BC5365C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D2FC424-EDFA-4CE1-B4F9-C88921438F20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D2FC424-EDFA-4CE1-B4F9-C88921438F20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D2FC424-EDFA-4CE1-B4F9-C88921438F20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D2FC424-EDFA-4CE1-B4F9-C88921438F20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -149,6 +155,7 @@ Global
 		{34590E48-D21E-46BF-8DF6-64089479193D} = {D5F45AC0-B1A7-49F6-823C-B2C22CF12C50}
 		{64D4300A-37FC-4088-89BB-3A0ED2335D89} = {DBD41598-5F74-4D0F-B371-D9E920A8EDE2}
 		{D101037B-1B72-4133-90E3-EE3C4BC5365C} = {64D4300A-37FC-4088-89BB-3A0ED2335D89}
+		{6D2FC424-EDFA-4CE1-B4F9-C88921438F20} = {D5F45AC0-B1A7-49F6-823C-B2C22CF12C50}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {999321AE-12B4-4228-B0EA-0A5C7F554C15}
