@@ -3,8 +3,10 @@ using Microsoft.AspNetCore.Mvc;
 namespace ConfigurationName.Controllers;
 [ApiController]
 [Route("[controller]/[action]")]
-public class Home : ControllerBase
+public class HomeController : ControllerBase
 {
+
+
     [HttpGet]
     public IActionResult Index()
     {
