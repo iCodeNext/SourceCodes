@@ -10,7 +10,7 @@ public class Settings
 
     [ConfigurationKeyName("Sms:Rest:Uri2")]
     public string Sms_Rest_Uri2 { get; set; }
-
+     
     [ConfigurationKeyName("Sms:Rest")]
     public Rest Rest { get; set; }
 }
