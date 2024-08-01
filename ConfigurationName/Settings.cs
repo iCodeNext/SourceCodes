@@ -1,20 +1,16 @@
 ﻿namespace ConfigurationName;
 
-public class Settings
+public class User
 {
-    public const string Section = "Settings";
-    //public Sms Sms { get; set; }
+    public string FirstName { get; set; }
 
-    [ConfigurationKeyName("Sms:Rest:Uri1")]
-    public string Sms_Rest_Uri1 { get; set; }
-
-    [ConfigurationKeyName("Sms:Rest:Uri2")]
-    public string Sms_Rest_Uri2 { get; set; }
-     
-    [ConfigurationKeyName("Sms:Rest")]
-    public Rest Rest { get; set; }
+    public Address Address{ get; set; }
 }
 
+public class Address
+{
+
+}
 //public class Sms
 //{
 //    public Rest Rest { get; set; }
