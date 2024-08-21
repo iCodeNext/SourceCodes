@@ -1,40 +1,36 @@
-﻿using System.Diagnostics;
+﻿ListOfInt myList = new ListOfInt();
 
-Console.WriteLine("Hello, World!");
-
-ListOfInt myList = new ListOfInt();
-
-while (myList.MoveNext())
+foreach (var item in myList)
 {
-    var value = myList.Current;
-    Console.WriteLine(value);
+    Console.WriteLine(item);
 }
 
+//var enumerator = myList.GetEnumerator();
+//while (enumerator.MoveNext())
+//{
+//    var value = enumerator.Current;
+//    Console.WriteLine(value);
+//}
+
+List<int> ints = new List<int>();
+
+
 public interface IEnumerable
+{
+    IEnumerator GetEnumerator();
+}
+public interface IEnumerable<T> : IEnumerable
+{
+    IEnumerator<T> GetEnumerator();
+}
+
+public interface IEnumerator
 {
     bool MoveNext();
     object Current { get; }
     void Reset();
 }
-
-public class ListOfInt : IEnumerable
+public interface IEnumerator<T> : IEnumerator , IDisposable
 {
-    int[] _ints = [2, 3, 4, 5, 6];
-    int _index = -1;
-
-    public object Current => _ints[_index];
-
-    public bool MoveNext()
-    {
-        if (_index++ < _ints.Length-1)
-            return true;
-        return false;
-    }
-
-    public void Reset()
-    {
-        _index = -1;
-    }
+    T Current { get; }
 }
-
- 
