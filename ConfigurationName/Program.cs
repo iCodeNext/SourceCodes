@@ -5,19 +5,8 @@ using System.Text.Json;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
-    JsonSerializerOptions options = new()
-    {
-        DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
-    };
-    var user = new User()
-    {
-        FirstName = "Mo",
-        Address = null
-    };
-    var jsonResult = JsonSerializer.Serialize(user, options);
 
-//builder.Services.Configure<Settings>(builder.Configuration.GetSection(Settings.Section));
-jsonResult.ToString();
+builder.Services.Configure<Settings>(builder.Configuration.GetSection("Settings"));
 var app = builder.Build();
 app.UseHttpsRedirection();
 app.UseAuthorization();

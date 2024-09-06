@@ -4,12 +4,13 @@ using Microsoft.Extensions.Options;
 namespace ConfigurationName.Controllers;
 [ApiController]
 [Route("[controller]/[action]")]
-public class HomeController() : ControllerBase
+public class HomeController(IOptions<Settings> options) : ControllerBase
 {
-
+    Settings settings = options.Value;
     [HttpGet]
     public IActionResult Index()
     {
-        return Ok($"Hello From iCodeNext!");
+       // settings.Id = 5666;
+        return Ok($"Hello From iCodeNext! {settings.Id}");
     }
 }
