@@ -38,14 +38,38 @@
 
 
 
- 
-using BenchmarkDotNet.Running;
-using DotNetCollections;
 
-public class Program
+//using BenchmarkDotNet.Running;
+//using DotNetCollections;
+
+//public class Program
+//{
+//    static void Main(string[] args)
+//    {
+//        BenchmarkRunner.Run<ListVsArrayListBenchmark>();
+//    }
+//}
+
+
+DotNetCollections.Queue<int> _queue = new DotNetCollections.Queue<int>();
+_queue.Enqueue(10);
+_queue.Enqueue(20);
+_queue.Enqueue(30);
+_queue.Enqueue(40);
+
+_queue.Enqueue(50);
+_queue.Enqueue(60);
+_queue.Enqueue(70);
+_queue.Enqueue(80);
+
+_queue.Dequeue();
+_queue.Enqueue(90);
+
+
+
+
+foreach (var item in _queue)
 {
-    static void Main(string[] args)
-    {
-        BenchmarkRunner.Run<ListVsArrayListBenchmark>();
-    }
+    Console.WriteLine(item);
 }
+Console.ReadLine();

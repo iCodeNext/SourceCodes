@@ -9,6 +9,7 @@ internal class AppDbContext : DbContext
     public DbSet<User> Users { get; set; }
     public DbSet<Post> Posts { get; set; }
     public DbSet<Tag> Tags { get; set; }
+    public DbSet<Order> Orders { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -50,4 +51,8 @@ public class Tag
     public int PostId { get; set; }
     [ForeignKey(nameof(PostId))]
     public virtual Post Post { get; set; }
+}
+public class Order
+{
+    public int Amount { get; set; }
 }
